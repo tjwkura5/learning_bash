@@ -8,7 +8,7 @@ groups=("Dev" "QA" "SysAd" "DBA" "Support" "Managers")
 
 # Defines an array named directories containing elements in the format of path:group:permissions.
 directories=(
-    "/var/www:Dev:rw"
+    "/var/www:Dev:rwx"
     "/var/log:Dev:r"
     "/var/staging:QA:rx"
     "/:SysAd:rwx"
