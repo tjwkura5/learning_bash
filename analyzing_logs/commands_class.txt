@@ -1,0 +1,21 @@
+awk '/error/ {print $0}' /var/log/auth_log.log
+
+This command prints all lines containing the word "error".
+
+Awk is more powerful for complex log analysis. 
+You can use it to extract specific fields, calculate statistics, and format output.
+
+sed '/error/p' /var/log/auth_log.log
+
+This command will print all lines containing the word "error".
+
+grep -Ei 'Authentication failure|Unauthorized|Failed|invalid' /var/log/auth_log.log
+
+This command searches for lines in the file /var/log/auth_log.log that contains one of the following 
+"Authentication failure", "Unauthorized", "Failed", "invalid".
+
+
+sudo bash -c "echo '' > /var/log/suspicious_activity.log"
+
+clears the file if it exist
+
