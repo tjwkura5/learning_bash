@@ -1,3 +1,5 @@
+#!/bin/bash
+
 current_directory=$(pwd)
 
 if [ ! -d "$current_directory/backup" ]; then
