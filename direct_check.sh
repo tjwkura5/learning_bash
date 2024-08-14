@@ -2,9 +2,13 @@
 
 current_directory=$(pwd)
 
-if [ ! -d "$current_directory/backup" ]; then
-  mkdir "$current_directory/backup"
-  echo "Directory created: backup"
+echo "what directory are you looking for?" 
+read dir
+
+if [ ! -d "$current_directory/$dir" ]; then
+  echo "Creating directory $dir"
+  mkdir "$current_directory/$dir"
+  echo "Directory created: $dir"
 else
-  echo "Directory already exists: backup"   
+  echo "Directory already exists: $dir"   
 fi
