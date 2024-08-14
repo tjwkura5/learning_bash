@@ -15,3 +15,6 @@ if [ -f "$file" ]; then
 else
     echo "the file does not exist at the path provided"
 fi 
+
+# /home/ubuntu/sys_info.sh
+
