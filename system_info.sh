@@ -14,9 +14,9 @@ check_connectivity_response() {
     #   - If the exit status is `0`, the host is reachable, and the code inside the `then` block will be executed.
     #   - If the exit status is non-zero, the host is not reachable, and the `else` block will be executed.
     if ping -c 1 "$host" &> /dev/null; then
-        # Perform a ping test to google.com with 4 packets and capture the output
+        # Perform a ping test to host with 4 packets and capture the output
         # - `packet.*transmitted.*loss`: Matches lines that include "packet" followed by any text, then "transmitted" followed by any text, and finally "loss".
-        stats=$(ping -c 4 google.com | grep -E 'packet.*transmitted.*loss')
+        stats=$(ping -c 4 $host | grep -E 'packet.*transmitted.*loss')
         # Extract the packet loss percentage from the captured statistics
         # - `echo $stats`: Outputs the captured ping statistics.
         # - `awk -F ',' '{print $4}'`: Splits the output by commas and prints the 4th field, which contains the packet loss information.
