@@ -19,5 +19,3 @@ sort |
 # Use uniq with the -c option to count the occurrences of each unique IP address
 # This gives the count of how many times each IP address encountered a 404 error
 uniq -c
-
-
