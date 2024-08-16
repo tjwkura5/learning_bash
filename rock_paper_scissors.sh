@@ -6,9 +6,8 @@ game_score=0
 
 #Get random value in array
 get_random() {
-    random_index=$((RANDOM % ${options[@]}))
-    random_value=${options[$random_index]}
-    echo "$random_value"
+    random_value="${options[$((RANDOM % ${#options[@]}))]}"
+    echo "$random_value" 
 }
 
 echo "Welcome to Rock, Paper, Scissors, Shoot!"
