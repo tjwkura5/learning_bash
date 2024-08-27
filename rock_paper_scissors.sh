@@ -1,4 +1,4 @@
-options=("Rock", "Paper", "Scissors")
+options=("Rock" "Paper" "Scissors")
 
 player_score=0
 
@@ -14,7 +14,7 @@ echo "Welcome to Rock, Paper, Scissors, Shoot!"
 
 #Play five rounds of rock paper scissor shoot
 for i in {1..5}; do
-    echo "Round $i:"
+    echo "Round $i of 5:"
     computer_choice=$(get_random)
     echo "Please Choose your option:"
 
