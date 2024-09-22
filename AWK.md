@@ -143,3 +143,16 @@ awk -F ':' -v OFS='\t' '{print $1, $3}' /etc/passwd
 ```
 
 * This command processes the /etc/passwd file, using a colon as the field separator. It prints the first and third fields, separated by a tab.
+
+### Additional Example with NF
+
+The command awk '{print $(NF-2)}' is used to extract and print specific fields from a line of text based on its structure. Here's a breakdown of each part:
+
+**$(NF-2):**
+
+NF is a built-in awk variable that represents the total number of fields in the current line.
+$(NF-2) means "print the third-to-last field of the current line". The -2 tells awk to count backwards from the last field (NF) to get the field two positions before the last one.
+
+**For example:**
+
+For a line like one two three four five, NF would be 5 (because there are five fields), and $(NF-2) would refer to the field at position 5-2 = 3, which is three.
