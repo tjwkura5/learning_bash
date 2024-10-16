@@ -12,7 +12,6 @@ DIR_TO_WATCH="/path/to/your/directory"
 # GitHub repository URL (replace with your actual repo URL)
 GITHUB_REPO_URL="https://github.com/your-username/your-repo.git"
 
-
 # Check if git is installed
 if command -v git >/dev/null 2>&1; then
     if [[ -d "$DIR_TO_WATCH" ]]; then

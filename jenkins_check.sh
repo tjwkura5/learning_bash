@@ -62,6 +62,10 @@ else
     sudo systemctl start jenkins
 
     sudo systemctl status jenkins
+
+    # Print Jenkins password
+
+    sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 fi
 
 
